@@ -1,6 +1,6 @@
-# =========================
+
 # Python
-# =========================
+
 __pycache__/
 *.py[cod]
 *.pyd
@@ -17,16 +17,16 @@ venv/
 env/
 ENV/
 
-# =========================
+
 # Environment files
-# =========================
+
 .env
 .env.*
 !.env.example
 
-# =========================
+
 # IDE / Editor
-# =========================
+
 .vscode/
 .idea/
 *.iml
@@ -34,36 +34,42 @@ ENV/
 # macOS
 .DS_Store
 
-# =========================
+
 # Logs
-# =========================
+
 *.log
 logs/
 *.out
 
-# =========================
+
 # FastAPI / Uvicorn
-# =========================
+
 uvicorn.log
 
-# =========================
+
 # Cache
-# =========================
+
 .cache/
 .cache_stats.json
 
-# =========================
+
 # Generated reports / exports
-# =========================
+
 reports/
 *.pdf
 *.png
 *.jpg
 *.jpeg
 
-# =========================
+
 # Test / Coverage
-# =========================
+
 .pytest_cache/
 .coverage
 htmlcov/
+
+# Allow project snapshots to be committed
+!snap-shots/
+!snap-shots/*.png
+!snap-shots/*.jpg
+!snap-shots/*.jpeg
