@@ -1,0 +1,9 @@
+themes:
+  - name: Auth Failures
+    keywords: ["login", "auth", "token", "jwt", "session expired"]
+  - name: Latency / Cache
+    keywords: ["latency", "slow", "cache miss", "redis", "timeout"]
+  - name: Infra Capacity
+    keywords: ["cpu", "memory", "disk", "node pressure", "oom"]
+  - name: SLO / Error Budget
+    keywords: ["slo", "error budget", "availability", "p99"]

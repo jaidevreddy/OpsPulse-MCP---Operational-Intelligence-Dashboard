@@ -1,0 +1,70 @@
+{
+  "schema_mapping": {
+    "incident": {
+      "id": "id",
+      "title": "title",
+      "service": "service",
+      "severity": "severity",
+      "status": "status",
+      "created_at": "created_at",
+      "resolved_at": "resolved_at",
+      "root_cause": "root_cause",
+      "tags": "tags"
+    },
+    "ticket": {
+      "id": "id",
+      "title": "title",
+      "service": "service",
+      "priority": "priority",
+      "status": "status",
+      "created_at": "created_at",
+      "sla_due_at": "sla_due_at",
+      "type": "type"
+    }
+  },
+
+  "theme_taxonomy": {
+    "payments_reliability": ["payment", "upi", "deducted", "refund", "gateway"],
+    "db_capacity": ["db", "connection", "pool", "exhaust", "postgres", "timeout"],
+    "latency_cache": ["latency", "cache", "miss", "slow", "p95", "p99"],
+    "autoscaling": ["autoscaler", "scaling", "hpa", "cpu", "replica"],
+    "app_crash": ["crash", "freeze", "app not opening", "fatal"]
+  },
+
+  "health_scoring": {
+    "base_score": 100,
+    "penalties": {
+      "open_incident": 2,
+      "sev1_open_incident": 10,
+      "sev2_open_incident": 6,
+      "sla_breach_open_ticket": 8,
+      "high_volume_service_multiplier": 1.2
+    },
+    "thresholds": {
+      "high_volume_service_incidents": 2
+    }
+  },
+
+  "recommendation_templates": {
+    "payments_reliability": [
+      "Add idempotency checks and payment reconciliation job for failed orders",
+      "Increase observability: payment success rate, gateway errors, UPI timeout buckets"
+    ],
+    "db_capacity": [
+      "Tune DB pool + add backpressure; enforce per-service connection limits",
+      "Create DB saturation alerting: pool usage, slow queries, connection errors"
+    ],
+    "latency_cache": [
+      "Warm critical caches and add circuit-breaker for cache miss storms",
+      "Add latency SLO dashboards by endpoint and upstream dependency"
+    ],
+    "autoscaling": [
+      "Reduce autoscaler lag: tune HPA targets and scale-up policies",
+      "Add predictive scaling on traffic spikes (time-of-day based)"
+    ],
+    "app_crash": [
+      "Ship crash analytics and block releases with crash-free threshold",
+      "Add rollback automation + canary based on crash spikes"
+    ]
+  }
+}

@@ -1,0 +1,6 @@
+health_score:
+  base: 100
+  deductions:
+    open_incident: 10
+    sev1_incident: 25
+    sla_breach: 5

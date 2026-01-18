@@ -1,0 +1,53 @@
+[
+  {
+    "id": "INC-1001",
+    "title": "Payment failures for UPI users",
+    "service": "payments",
+    "severity": "SEV1",
+    "status": "open",
+    "created_at": "2026-01-15T10:12:00Z",
+    "resolved_at": null,
+    "root_cause": "DB connection pool exhaustion",
+    "tags": ["upi", "db", "timeouts"]
+  },
+  {
+    "id": "INC-1002",
+    "title": "Delivery ETA spike in Bangalore",
+    "service": "logistics",
+    "severity": "SEV2",
+    "status": "resolved",
+    "created_at": "2026-01-14T18:30:00Z",
+    "resolved_at": "2026-01-14T19:55:00Z",
+    "root_cause": "Autoscaler lag",
+    "tags": ["eta", "autoscaling"]
+  },
+  {
+    "id": "INC-1003",
+    "title": "Search latency high",
+    "service": "search",
+    "severity": "SEV3",
+    "status": "open",
+    "created_at": "2026-01-16T07:05:00Z",
+    "resolved_at": null,
+    "root_cause": "Cache miss storm",
+    "tags": ["latency", "cache"]
+  },
+  {
+  "id": "INC-2001",
+  "title": "Autoscaling lag during traffic spike",
+  "description": "HPA scale-up lag caused CPU saturation for 10-12 minutes in API gateway. Increased p95 latency and request drops were observed.",
+  "status": "open",
+  "severity": "sev2",
+  "service": "api-gateway",
+  "created_at": "2026-01-16T11:10:00Z"
+},
+{
+  "id": "INC-2002",
+  "title": "DB read replica lag impacting dashboards",
+  "description": "Read replica lag increased to 45s causing stale metrics and delayed operational dashboards. Suspected heavy analytical queries.",
+  "status": "open",
+  "severity": "sev3",
+  "service": "analytics-db",
+  "created_at": "2026-01-16T12:05:00Z"
+}
+]

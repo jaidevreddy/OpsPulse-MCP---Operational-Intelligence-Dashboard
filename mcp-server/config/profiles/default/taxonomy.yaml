@@ -1,0 +1,7 @@
+themes:
+  - name: Payments Reliability
+    keywords: ["payment", "upi", "gateway", "refund", "order failed"]
+  - name: DB Capacity
+    keywords: ["db", "connection pool", "postgres", "slow query"]
+  - name: Autoscaling
+    keywords: ["autoscaling", "hpa", "scale up", "pods"]

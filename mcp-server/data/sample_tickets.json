@@ -1,0 +1,52 @@
+[
+  {
+    "id": "TCK-2001",
+    "type": "support",
+    "title": "Payment deducted but order failed",
+    "service": "payments",
+    "priority": "P1",
+    "status": "open",
+    "created_at": "2026-01-15T11:10:00Z",
+    "sla_due_at": "2026-01-15T15:10:00Z"
+  },
+  {
+    "id": "TCK-2002",
+    "type": "internal",
+    "title": "Delivery partner app crash",
+    "service": "logistics",
+    "priority": "P2",
+    "status": "resolved",
+    "created_at": "2026-01-13T09:15:00Z",
+    "sla_due_at": "2026-01-13T18:00:00Z"
+  },
+  {
+    "id": "TCK-2003",
+    "type": "support",
+    "title": "Search results empty",
+    "service": "search",
+    "priority": "P1",
+    "status": "open",
+    "created_at": "2026-01-16T06:55:00Z",
+    "sla_due_at": "2026-01-16T10:55:00Z"
+  },
+  {
+    "id": "TCK-9999",
+    "type": "support",
+    "title": "Refund stuck for UPI order",
+    "service": "payments",
+    "priority": "P1",
+    "status": "open",
+    "created_at": "2026-01-16T10:00:00Z",
+    "sla_due_at": "2026-01-16T14:00:00Z"
+  },
+  {
+    "id": "TCK-2009",
+    "title": "Cache hit rate dropped across catalog service",
+    "description": "Observed sudden increase in Redis cache misses causing elevated latency on catalog APIs. Suspected eviction due to memory pressure.",
+    "status": "open",
+    "service": "catalog",
+    "priority": "P1",
+    "created_at": "2026-01-16T10:30:00Z",
+    "sla_breached": false
+  }
+]

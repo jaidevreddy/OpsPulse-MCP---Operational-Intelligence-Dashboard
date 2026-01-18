@@ -1,0 +1,11 @@
+services:
+  opspulse:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      - OPSPULSE_DATA_DIR=/app/data
+      - OPSPULSE_CONFIG_PATH=/app/config/config.json
+    volumes:
+      - ./data:/app/data
+      - ./config:/app/config
